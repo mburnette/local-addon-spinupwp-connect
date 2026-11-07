@@ -1,0 +1,440 @@
+/*
+ * ConnectLocal for SpinupWP. Colours lean on currentColor/transparency so the panel follows Local's light and dark
+ * themes. The accent is SpinupWP blue (#87a8ed) for lines and outlines; text links use a slightly lighter tint so they stay
+ * readable on Local's dark theme as well as its light one.
+ */
+
+.SPConnect {
+	--sp-accent: #87a8ed;
+	--sp-accent-text: #6d8fe0;
+	padding: 20px 30px 30px;
+	max-width: 720px;
+	font-size: 14px;
+	line-height: 1.45;
+}
+
+.SPConnect_Title {
+	margin-bottom: 14px;
+}
+
+.SPConnect_SectionTitle {
+	margin: 22px 0 10px;
+}
+
+.SPConnect_Intro {
+	margin: 0 0 16px;
+	opacity: 0.8;
+}
+
+.SPConnect_Tabs {
+	display: flex;
+	gap: 4px;
+	margin-bottom: 18px;
+	border-bottom: 1px solid rgba(127, 127, 127, 0.3);
+}
+
+.SPConnect_Tab {
+	appearance: none;
+	background: none;
+	border: 0;
+	border-bottom: 2px solid transparent;
+	color: inherit;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 600;
+	margin-bottom: -1px;
+	opacity: 0.65;
+	padding: 8px 12px;
+}
+
+.SPConnect_Tab.is-active {
+	border-bottom-color: var(--sp-accent);
+	opacity: 1;
+}
+
+.SPConnect_Tab:focus-visible {
+	outline: 2px solid var(--sp-accent);
+	outline-offset: 2px;
+}
+
+.SPConnect_Form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.SPConnect_Row {
+	display: grid;
+	grid-template-columns: 1fr 90px;
+	gap: 12px;
+}
+
+.SPConnect_Field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.SPConnect_FieldLabel {
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.SPConnect_Help {
+	font-size: 12px;
+	opacity: 0.7;
+}
+
+.SPConnect_Help a,
+.SPConnect_Intro a {
+	color: var(--sp-accent-text);
+}
+
+/*
+ * Fully styled instead of the native macOS control, which has a fixed height and clips padded text. The
+ * chevron is a mid-grey that reads on both themes; color-scheme keeps the popup menu in Local's theme.
+ */
+.SPConnect_Select {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23999' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-position: right 14px center;
+	background-repeat: no-repeat;
+	border: 1px solid rgba(127, 127, 127, 0.45);
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: inherit;
+	color-scheme: light dark;
+	cursor: pointer;
+	font: inherit;
+	height: auto;
+	line-height: 1.4;
+	min-height: 44px;
+	overflow: hidden;
+	padding: 10px 40px 10px 14px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.SPConnect_Select:hover {
+	border-color: rgba(127, 127, 127, 0.7);
+}
+
+.SPConnect_Select:focus-visible {
+	border-color: var(--sp-accent);
+	outline: none;
+	box-shadow: 0 0 0 1px var(--sp-accent);
+}
+
+.SPConnect_AuthChoice {
+	display: flex;
+	gap: 20px;
+}
+
+.SPConnect_AuthChoice label {
+	cursor: pointer;
+}
+
+.SPConnect_KeyBox {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 6px;
+}
+
+.SPConnect_KeyText {
+	background: rgba(127, 127, 127, 0.08);
+	border: 1px solid rgba(127, 127, 127, 0.35);
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: inherit;
+	font-family: Menlo, Consolas, monospace;
+	font-size: 11px;
+	padding: 8px;
+	resize: none;
+	width: 100%;
+	word-break: break-all;
+}
+
+.SPConnect_Account {
+	align-items: center;
+	display: flex;
+	gap: 12px;
+	justify-content: space-between;
+}
+
+.SPConnect_Table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.SPConnect_Table th,
+.SPConnect_Table td {
+	border-bottom: 1px solid rgba(127, 127, 127, 0.2);
+	padding: 8px 0;
+	text-align: left;
+	vertical-align: top;
+}
+
+.SPConnect_Table th {
+	font-weight: 600;
+	padding-right: 20px;
+	white-space: nowrap;
+	width: 130px;
+}
+
+.SPConnect_Table td {
+	word-break: break-all;
+}
+
+.SPConnect_Options {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.SPConnect_Consequences {
+	margin: 16px 0 0;
+	opacity: 0.8;
+	padding-left: 18px;
+}
+
+.SPConnect_Actions {
+	align-items: center;
+	display: flex;
+	gap: 16px;
+	margin-top: 16px;
+}
+
+.SPConnect_Secondary {
+	align-items: center;
+	border-top: 1px solid rgba(127, 127, 127, 0.2);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin-top: 24px;
+	padding-top: 16px;
+}
+
+.SPConnect_Busy {
+	align-items: center;
+	display: flex;
+	gap: 10px;
+	opacity: 0.8;
+}
+
+.SPConnect_Error,
+.SPConnect_Warning,
+.SPConnect_Success {
+	border-radius: 4px;
+	font-size: 13px;
+	margin-top: 12px;
+	padding: 10px 12px;
+	white-space: pre-wrap;
+}
+
+.SPConnect_Error {
+	background: rgba(226, 67, 67, 0.12);
+	border: 1px solid rgba(226, 67, 67, 0.45);
+}
+
+.SPConnect_Warning {
+	background: rgba(241, 177, 66, 0.14);
+	border: 1px solid rgba(241, 177, 66, 0.45);
+}
+
+.SPConnect_Success {
+	background: rgba(81, 187, 123, 0.12);
+	border: 1px solid rgba(81, 187, 123, 0.45);
+}
+
+.SPConnect_Modal {
+	padding: 10px 10px 0;
+	text-align: left;
+	width: 520px;
+	max-width: 100%;
+}
+
+.SPConnect_Tabs--Transfer {
+	margin-top: 24px;
+}
+
+.SPConnect_HeaderButtons {
+	align-items: center;
+	display: inline-flex;
+	gap: 8px;
+	margin-left: 10px;
+}
+
+.SPConnect_HeaderLabel {
+	font-size: 12px;
+	font-weight: 600;
+	opacity: 0.7;
+}
+
+.SPConnect_HeaderButton {
+	white-space: nowrap;
+}
+
+/* Compare & sync */
+
+.SPConnect_Actions--Top {
+	margin-top: 0;
+}
+
+.SPConnect_Summary {
+	font-weight: 600;
+	margin: 16px 0 10px;
+}
+
+.SPConnect_Filter {
+	margin-bottom: 12px;
+}
+
+.SPConnect_Group {
+	border: 1px solid rgba(127, 127, 127, 0.25);
+	border-radius: 4px;
+	margin-bottom: 12px;
+	max-height: 360px;
+	overflow-y: auto;
+}
+
+.SPConnect_GroupHeader {
+	align-items: center;
+	background: rgba(127, 127, 127, 0.08);
+	cursor: pointer;
+	display: flex;
+	font-weight: 600;
+	gap: 8px;
+	padding: 8px 10px;
+	position: sticky;
+	top: 0;
+}
+
+.SPConnect_FileRow {
+	align-items: baseline;
+	border-top: 1px solid rgba(127, 127, 127, 0.15);
+	cursor: pointer;
+	display: grid;
+	gap: 4px 8px;
+	grid-template-columns: auto 1fr;
+	padding: 6px 10px;
+}
+
+.SPConnect_FileRow:hover {
+	background: rgba(127, 127, 127, 0.06);
+}
+
+.SPConnect_FilePath {
+	font-family: Menlo, Consolas, monospace;
+	font-size: 12px;
+	overflow-wrap: anywhere;
+}
+
+.SPConnect_FileMeta {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 12px;
+	gap: 4px 12px;
+	grid-column: 2;
+	opacity: 0.75;
+}
+
+.SPConnect_Badge {
+	border: 1px solid currentColor;
+	border-radius: 10px;
+	font-size: 11px;
+	font-weight: 600;
+	padding: 0 7px;
+}
+
+.SPConnect_Badge--local {
+	color: #3b82c4;
+}
+
+.SPConnect_Badge--remote {
+	color: var(--sp-accent-text);
+}
+
+.SPConnect_SyncBar {
+	background: inherit;
+	bottom: 0;
+	justify-content: flex-end;
+	padding: 10px 0;
+	position: sticky;
+}
+
+.SPConnect_SyncBar > span {
+	margin-right: auto;
+	opacity: 0.8;
+}
+
+/* Pull to a new site */
+
+.SPConnect_NewSite {
+	margin: 0 auto;
+	max-width: 640px;
+	padding-top: 30px;
+}
+
+.SPConnect_NewSiteHeader {
+	align-items: center;
+	display: flex;
+	gap: 16px;
+	margin-bottom: 8px;
+}
+
+.SPConnect_NewSiteHeader .SPConnect_Title {
+	margin-bottom: 0;
+}
+
+/* Update notice and version line */
+.SPConnect_Update {
+	background: rgba(221, 58, 3, 0.08);
+	border: 1px solid rgba(221, 58, 3, 0.35);
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	font-size: 13px;
+	gap: 8px;
+	margin: 0 0 16px;
+	padding: 10px 12px;
+}
+
+.SPConnect_UpdateActions {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.SPConnect_Version {
+	align-items: center;
+	border-top: 1px solid rgba(127, 127, 127, 0.2);
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 12px;
+	gap: 12px;
+	margin-top: 32px;
+	opacity: 0.75;
+	padding-top: 12px;
+}
+
+/* Tools tab entry: host name plus a check while the site is linked. */
+.SPConnect_MenuLabel {
+	align-items: center;
+	display: inline-flex;
+	gap: 6px;
+}
+
+.SPConnect_LinkedCheck {
+	flex-shrink: 0;
+	height: 14px;
+	stroke: #51bb7b;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 2.25;
+	width: 14px;
+}
