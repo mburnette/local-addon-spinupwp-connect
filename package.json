@@ -1,7 +1,7 @@
 {
   "name": "local-addon-spinupwp-connect",
   "productName": "ConnectLocal for SpinupWP",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Push Local sites (files, database, or both) to WordPress sites on SpinupWP servers and pull them back, the same way Local Connect works with WP Engine and Flywheel.",
   "author": "Marcus Burnette",
   "license": "MIT",
